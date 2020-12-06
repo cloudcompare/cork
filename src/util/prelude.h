@@ -60,7 +60,7 @@ std::ostream &err();
         err()     << "ENSURE FAILED at " \
                   << __FILE__ << ", line #" << __LINE__ << ":\n" \
                   << "    " << #STATEMENT << std::endl; \
-		throw std::exception("ENSURE FAILED"); \
+		throw std::runtime_error("ENSURE FAILED"); \
     } \
 }
 #endif // ENSURE
